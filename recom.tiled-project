@@ -1,0 +1,173 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "extensionsPath": "extensions",
+    "folders": [
+        "Stories"
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 9,
+            "members": [
+                {
+                    "name": "Check Event Room",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "Destination",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "Door Type",
+                    "propertyType": "DoorType",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "Door",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "DoorType",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Normal",
+                "To Event 1",
+                "To Event 2",
+                "To Event 3",
+                "Open After Event",
+                "To Goal",
+                "To Extra",
+                "One-Way",
+                "World Entrance",
+                "Select World",
+                "Floor Change",
+                "To Last",
+                "Event Room",
+                "Debug"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 6,
+            "members": [
+                {
+                    "name": "Depth",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "Goal Scene",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "ID",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "Start Scene",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "Width",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "Floor",
+            "type": "class",
+            "useAs": [
+                "layer"
+            ]
+        },
+        {
+            "color": "#ff00ff00",
+            "drawFill": true,
+            "id": 7,
+            "members": [
+                {
+                    "name": "Fix Scene",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "ID",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "Room Type",
+                    "propertyType": "RoomType",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "North Door",
+                    "propertyType": "Door",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "South Door",
+                    "propertyType": "Door",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "East Door",
+                    "propertyType": "Door",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "West Door",
+                    "propertyType": "Door",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "Room",
+            "type": "class",
+            "useAs": [
+                "object"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "RoomType",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Card",
+                "Start",
+                "Event 1",
+                "Event 2",
+                "Event 3",
+                "Goal",
+                "Extra",
+                "Last",
+                "Fix"
+            ],
+            "valuesAsFlags": false
+        }
+    ]
+}
