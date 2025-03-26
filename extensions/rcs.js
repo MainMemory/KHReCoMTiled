@@ -147,12 +147,32 @@ function writeRoomsFile(tilemap) {
 				var door = rm.property(doorNames[i]);
 				if (door != null) {
 					var dst = door.value.Destination;
-					if (dst != null)
-						view.setInt16(datoff, dst.property("ID") ?? 0, true);
+					if (dst != null) {
+						var dst_room;
+						for (var rm2 of rooms) {
+							if (rm2.property("ID") == dst) {
+								dst_room = rm2;
+								break;
+							}
+						}
+						view.setInt16(datoff, dst_room?.property("ID") ?? 0, true);
+					} else {
+						view.setInt16(datoff, 0, true);
+					}
 					view.setInt8(datoff + 2, door.value["Door Type"].value ?? 0);
 					dst = door.value["Check Event Room"];
-					if (dst != null)
-						view.setInt8(datoff + 3, dst.property("ID") ?? 0);
+					if (dst != null) {
+						var dst_room;
+						for (var rm2 of rooms) {
+							if (rm2.property("ID") == dst) {
+								dst_room = rm2;
+								break;
+							}
+						}
+						view.setInt8(datoff + 3, dst_room?.property("ID") ?? 0);
+					} else {
+						view.setInt8(datoff + 3, 0);
+					}
 				}
 				datoff += 4;
 			}
