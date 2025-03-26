@@ -147,11 +147,11 @@ function writeRoomsFile(tilemap) {
 				var door = rm.property(doorNames[i]);
 				if (door != null) {
 					var dst = door.value.Destination;
-					if (dst != null)
+					if (dst != null && dst.id != 0)
 						view.setInt16(datoff, dst.property("ID") ?? 0, true);
 					view.setInt8(datoff + 2, door.value["Door Type"].value ?? 0);
 					dst = door.value["Check Event Room"];
-					if (dst != null)
+					if (dst != null && dst.id != 0)
 						view.setInt8(datoff + 3, dst.property("ID") ?? 0);
 				}
 				datoff += 4;
