@@ -18,7 +18,7 @@ function readArchiveFile(filename) {
 				break;
 			name += String.fromCharCode(c);
 		}
-		result.set(name.toLowerCase(), fd);
+		result.set(name, fd);
 		addr += 0x20;
 	}
 	return result;
